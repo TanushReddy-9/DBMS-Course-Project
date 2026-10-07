@@ -32,9 +32,9 @@ def connect_database():
 def view_customers():
 
     window = tk.Toplevel(root)
-    window.title("Customer Records")
+    window.title("Customer Directory")
     window.geometry("1200x650")
-    window.configure(bg="#f4f6f8")
+    window.configure(bg="#F5F7F5")
 
 
     # =========================
@@ -43,7 +43,7 @@ def view_customers():
 
     header = tk.Frame(
         window,
-        bg="#1f2937",
+        bg="#123B3A",
         height=100
     )
 
@@ -53,8 +53,8 @@ def view_customers():
 
     tk.Label(
         header,
-        text="Customer Records",
-        bg="#1f2937",
+        text="Customer Directory",
+        bg="#123B3A",
         fg="white",
         font=("Arial", 22, "bold")
     ).pack(
@@ -66,9 +66,9 @@ def view_customers():
 
     tk.Label(
         header,
-        text="View and search customer information",
-        bg="#1f2937",
-        fg="#d1d5db",
+        text="Search and manage registered customers",
+        bg="#123B3A",
+        fg="#B8CAC6",
         font=("Arial", 10)
     ).pack(
         anchor="w",
@@ -82,7 +82,7 @@ def view_customers():
 
     search_frame = tk.Frame(
         window,
-        bg="#f4f6f8"
+        bg="#F5F7F5"
     )
 
     search_frame.pack(
@@ -95,8 +95,8 @@ def view_customers():
     tk.Label(
         search_frame,
         text="Search:",
-        bg="#f4f6f8",
-        fg="#374151",
+        bg="#F5F7F5",
+        fg="#24403F",
         font=("Arial", 11, "bold")
     ).pack(
         side="left"
@@ -269,8 +269,8 @@ def view_customers():
     count_label = tk.Label(
         window,
         text="",
-        bg="#f4f6f8",
-        fg="#6b7280",
+        bg="#F5F7F5",
+        fg="#6B7C78",
         font=("Arial", 10)
     )
 
@@ -429,9 +429,9 @@ def view_customers():
         search_frame,
         text="SEARCH",
         command=search_customers,
-        bg="#2563eb",
+        bg="#0F766E",
         fg="white",
-        activebackground="#1d4ed8",
+        activebackground="#0B5F59",
         activeforeground="white",
         font=("Arial", 10, "bold"),
         relief="flat",
@@ -450,9 +450,9 @@ def view_customers():
         search_frame,
         text="REFRESH",
         command=refresh_customers,
-        bg="#e5e7eb",
-        fg="#374151",
-        activebackground="#d1d5db",
+        bg="#E1E8E5",
+        fg="#24403F",
+        activebackground="#B8CAC6",
         font=("Arial", 10, "bold"),
         relief="flat",
         width=10,
@@ -474,9 +474,9 @@ def view_customers():
         window,
         text="CLOSE",
         command=window.destroy,
-        bg="#374151",
+        bg="#24403F",
         fg="white",
-        activebackground="#1f2937",
+        activebackground="#123B3A",
         font=("Arial", 10, "bold"),
         relief="flat",
         width=15,
@@ -515,7 +515,7 @@ def add_customer():
     window = tk.Toplevel(root)
     window.title("Add Customer")
     window.geometry("600x650")
-    window.configure(bg="#f4f6f8")
+    window.configure(bg="#F5F7F5")
     window.resizable(False, False)
 
     # =========================
@@ -524,7 +524,7 @@ def add_customer():
 
     header = tk.Frame(
         window,
-        bg="#1f2937",
+        bg="#123B3A",
         height=100
     )
 
@@ -534,7 +534,7 @@ def add_customer():
     tk.Label(
         header,
         text="Add New Customer",
-        bg="#1f2937",
+        bg="#123B3A",
         fg="white",
         font=("Arial", 22, "bold")
     ).pack(anchor="w", padx=30, pady=(20, 2))
@@ -542,8 +542,8 @@ def add_customer():
     tk.Label(
         header,
         text="Enter customer information below",
-        bg="#1f2937",
-        fg="#d1d5db",
+        bg="#123B3A",
+        fg="#B8CAC6",
         font=("Arial", 10)
     ).pack(anchor="w", padx=30)
 
@@ -554,7 +554,7 @@ def add_customer():
 
     form = tk.Frame(
         window,
-        bg="#f4f6f8"
+        bg="#F5F7F5"
     )
 
     form.pack(
@@ -571,8 +571,8 @@ def add_customer():
         tk.Label(
             form,
             text=text,
-            bg="#f4f6f8",
-            fg="#374151",
+            bg="#F5F7F5",
+            fg="#24403F",
             font=("Arial", 10, "bold")
         ).grid(
             row=row,
@@ -647,8 +647,8 @@ def add_customer():
     tk.Label(
         form,
         text="Format: YYYY-MM-DD",
-        bg="#f4f6f8",
-        fg="#6b7280",
+        bg="#F5F7F5",
+        fg="#6B7C78",
         font=("Arial", 8)
     ).grid(
         row=3,
@@ -923,7 +923,7 @@ def add_customer():
 
     button_frame = tk.Frame(
         window,
-        bg="#f4f6f8"
+        bg="#F5F7F5"
     )
 
     button_frame.pack(
@@ -935,9 +935,9 @@ def add_customer():
         button_frame,
         text="ADD CUSTOMER",
         command=save_customer,
-        bg="#2563eb",
+        bg="#0F766E",
         fg="white",
-        activebackground="#1d4ed8",
+        activebackground="#0B5F59",
         activeforeground="white",
         font=("Arial", 11, "bold"),
         relief="flat",
@@ -956,9 +956,9 @@ def add_customer():
         button_frame,
         text="CANCEL",
         command=window.destroy,
-        bg="#e5e7eb",
-        fg="#374151",
-        activebackground="#d1d5db",
+        bg="#E1E8E5",
+        fg="#24403F",
+        activebackground="#B8CAC6",
         font=("Arial", 11, "bold"),
         relief="flat",
         width=12,
@@ -985,7 +985,7 @@ def delete_customer():
     window = tk.Toplevel(root)
     window.title("Delete Customer")
     window.geometry("550x400")
-    window.configure(bg="#f4f6f8")
+    window.configure(bg="#F5F7F5")
     window.resizable(False, False)
 
 
@@ -995,7 +995,7 @@ def delete_customer():
 
     header = tk.Frame(
         window,
-        bg="#1f2937",
+        bg="#123B3A",
         height=100
     )
 
@@ -1006,7 +1006,7 @@ def delete_customer():
     tk.Label(
         header,
         text="Delete Customer",
-        bg="#1f2937",
+        bg="#123B3A",
         fg="white",
         font=("Arial", 22, "bold")
     ).pack(
@@ -1019,8 +1019,8 @@ def delete_customer():
     tk.Label(
         header,
         text="Remove an existing customer record",
-        bg="#1f2937",
-        fg="#d1d5db",
+        bg="#123B3A",
+        fg="#B8CAC6",
         font=("Arial", 10)
     ).pack(
         anchor="w",
@@ -1034,7 +1034,7 @@ def delete_customer():
 
     content = tk.Frame(
         window,
-        bg="#f4f6f8"
+        bg="#F5F7F5"
     )
 
     content.pack(
@@ -1046,8 +1046,8 @@ def delete_customer():
     tk.Label(
         content,
         text="Customer ID",
-        bg="#f4f6f8",
-        fg="#374151",
+        bg="#F5F7F5",
+        fg="#24403F",
         font=("Arial", 11, "bold")
     ).pack(
         pady=(0, 8)
@@ -1071,8 +1071,8 @@ def delete_customer():
     tk.Label(
         content,
         text="Enter the ID of the customer you want to delete.",
-        bg="#f4f6f8",
-        fg="#6b7280",
+        bg="#F5F7F5",
+        fg="#6B7C78",
         font=("Arial", 9)
     ).pack(
         pady=8
@@ -1232,7 +1232,7 @@ def delete_customer():
 
     button_frame = tk.Frame(
         window,
-        bg="#f4f6f8"
+        bg="#F5F7F5"
     )
 
     button_frame.pack(
@@ -1244,9 +1244,9 @@ def delete_customer():
         button_frame,
         text="DELETE CUSTOMER",
         command=remove_customer,
-        bg="#dc2626",
+        bg="#C94B4B",
         fg="white",
-        activebackground="#b91c1c",
+        activebackground="#A83D3D",
         activeforeground="white",
         font=("Arial", 11, "bold"),
         relief="flat",
@@ -1265,9 +1265,9 @@ def delete_customer():
         button_frame,
         text="CANCEL",
         command=window.destroy,
-        bg="#e5e7eb",
-        fg="#374151",
-        activebackground="#d1d5db",
+        bg="#E1E8E5",
+        fg="#24403F",
+        activebackground="#B8CAC6",
         font=("Arial", 11, "bold"),
         relief="flat",
         width=12,
@@ -1286,9 +1286,9 @@ def delete_customer():
 def view_policies():
 
     window = tk.Toplevel(root)
-    window.title("Policy Records")
+    window.title("Policy Portfolio")
     window.geometry("1250x650")
-    window.configure(bg="#f4f6f8")
+    window.configure(bg="#F5F7F5")
 
 
     # =========================
@@ -1297,7 +1297,7 @@ def view_policies():
 
     header = tk.Frame(
         window,
-        bg="#1f2937",
+        bg="#123B3A",
         height=100
     )
 
@@ -1307,8 +1307,8 @@ def view_policies():
 
     tk.Label(
         header,
-        text="Policy Records",
-        bg="#1f2937",
+        text="Policy Portfolio",
+        bg="#123B3A",
         fg="white",
         font=("Arial", 22, "bold")
     ).pack(
@@ -1320,9 +1320,9 @@ def view_policies():
 
     tk.Label(
         header,
-        text="View active and historical insurance policies",
-        bg="#1f2937",
-        fg="#d1d5db",
+        text="Browse active and historical policies",
+        bg="#123B3A",
+        fg="#B8CAC6",
         font=("Arial", 10)
     ).pack(
         anchor="w",
@@ -1336,7 +1336,7 @@ def view_policies():
 
     search_frame = tk.Frame(
         window,
-        bg="#f4f6f8"
+        bg="#F5F7F5"
     )
 
     search_frame.pack(
@@ -1349,8 +1349,8 @@ def view_policies():
     tk.Label(
         search_frame,
         text="Search:",
-        bg="#f4f6f8",
-        fg="#374151",
+        bg="#F5F7F5",
+        fg="#24403F",
         font=("Arial", 11, "bold")
     ).pack(
         side="left"
@@ -1528,8 +1528,8 @@ def view_policies():
     count_label = tk.Label(
         window,
         text="",
-        bg="#f4f6f8",
-        fg="#6b7280",
+        bg="#F5F7F5",
+        fg="#6B7C78",
         font=("Arial", 10)
     )
 
@@ -1682,9 +1682,9 @@ def view_policies():
         search_frame,
         text="SEARCH",
         command=search_policies,
-        bg="#2563eb",
+        bg="#0F766E",
         fg="white",
-        activebackground="#1d4ed8",
+        activebackground="#0B5F59",
         font=("Arial", 10, "bold"),
         relief="flat",
         width=10,
@@ -1702,9 +1702,9 @@ def view_policies():
         search_frame,
         text="REFRESH",
         command=refresh_policies,
-        bg="#e5e7eb",
-        fg="#374151",
-        activebackground="#d1d5db",
+        bg="#E1E8E5",
+        fg="#24403F",
+        activebackground="#B8CAC6",
         font=("Arial", 10, "bold"),
         relief="flat",
         width=10,
@@ -1726,9 +1726,9 @@ def view_policies():
         window,
         text="CLOSE",
         command=window.destroy,
-        bg="#374151",
+        bg="#24403F",
         fg="white",
-        activebackground="#1f2937",
+        activebackground="#123B3A",
         font=("Arial", 10, "bold"),
         relief="flat",
         width=15,
@@ -1759,7 +1759,7 @@ def add_policy():
     window = tk.Toplevel(root)
     window.title("Add Policy")
     window.geometry("650x700")
-    window.configure(bg="#f4f6f8")
+    window.configure(bg="#F5F7F5")
     window.resizable(False, False)
 
 
@@ -1769,7 +1769,7 @@ def add_policy():
 
     header = tk.Frame(
         window,
-        bg="#1f2937",
+        bg="#123B3A",
         height=100
     )
 
@@ -1779,7 +1779,7 @@ def add_policy():
     tk.Label(
         header,
         text="Add New Policy",
-        bg="#1f2937",
+        bg="#123B3A",
         fg="white",
         font=("Arial", 22, "bold")
     ).pack(
@@ -1791,8 +1791,8 @@ def add_policy():
     tk.Label(
         header,
         text="Create a new insurance policy",
-        bg="#1f2937",
-        fg="#d1d5db",
+        bg="#123B3A",
+        fg="#B8CAC6",
         font=("Arial", 10)
     ).pack(
         anchor="w",
@@ -1806,7 +1806,7 @@ def add_policy():
 
     form = tk.Frame(
         window,
-        bg="#f4f6f8"
+        bg="#F5F7F5"
     )
 
     form.pack(
@@ -1820,8 +1820,8 @@ def add_policy():
         tk.Label(
             form,
             text=text,
-            bg="#f4f6f8",
-            fg="#374151",
+            bg="#F5F7F5",
+            fg="#24403F",
             font=("Arial", 10, "bold")
         ).grid(
             row=row,
@@ -2009,8 +2009,8 @@ def add_policy():
     tk.Label(
         form,
         text="Format: YYYY-MM-DD",
-        bg="#f4f6f8",
-        fg="#6b7280",
+        bg="#F5F7F5",
+        fg="#6B7C78",
         font=("Arial", 8)
     ).grid(
         row=4,
@@ -2373,7 +2373,7 @@ def add_policy():
 
     button_frame = tk.Frame(
         window,
-        bg="#f4f6f8"
+        bg="#F5F7F5"
     )
 
     button_frame.pack(
@@ -2385,9 +2385,9 @@ def add_policy():
         button_frame,
         text="ADD POLICY",
         command=save_policy,
-        bg="#2563eb",
+        bg="#0F766E",
         fg="white",
-        activebackground="#1d4ed8",
+        activebackground="#0B5F59",
         activeforeground="white",
         font=("Arial", 11, "bold"),
         relief="flat",
@@ -2406,9 +2406,9 @@ def add_policy():
         button_frame,
         text="CANCEL",
         command=window.destroy,
-        bg="#e5e7eb",
-        fg="#374151",
-        activebackground="#d1d5db",
+        bg="#E1E8E5",
+        fg="#24403F",
+        activebackground="#B8CAC6",
         font=("Arial", 11, "bold"),
         relief="flat",
         width=12,
@@ -2425,9 +2425,9 @@ def add_policy():
 def view_claims():
 
     window = tk.Toplevel(root)
-    window.title("Claim Records")
+    window.title("Claims Register")
     window.geometry("1350x700")
-    window.configure(bg="#f4f6f8")
+    window.configure(bg="#F5F7F5")
 
 
     # =========================
@@ -2436,7 +2436,7 @@ def view_claims():
 
     header = tk.Frame(
         window,
-        bg="#1f2937",
+        bg="#123B3A",
         height=100
     )
 
@@ -2446,8 +2446,8 @@ def view_claims():
 
     tk.Label(
         header,
-        text="Claim Records",
-        bg="#1f2937",
+        text="Claims Register",
+        bg="#123B3A",
         fg="white",
         font=("Arial", 22, "bold")
     ).pack(
@@ -2459,9 +2459,9 @@ def view_claims():
 
     tk.Label(
         header,
-        text="View and search health insurance claims",
-        bg="#1f2937",
-        fg="#d1d5db",
+        text="Review submitted and processed claims",
+        bg="#123B3A",
+        fg="#B8CAC6",
         font=("Arial", 10)
     ).pack(
         anchor="w",
@@ -2475,7 +2475,7 @@ def view_claims():
 
     search_frame = tk.Frame(
         window,
-        bg="#f4f6f8"
+        bg="#F5F7F5"
     )
 
     search_frame.pack(
@@ -2488,8 +2488,8 @@ def view_claims():
     tk.Label(
         search_frame,
         text="Search:",
-        bg="#f4f6f8",
-        fg="#374151",
+        bg="#F5F7F5",
+        fg="#24403F",
         font=("Arial", 11, "bold")
     ).pack(
         side="left"
@@ -2673,8 +2673,8 @@ def view_claims():
     count_label = tk.Label(
         window,
         text="",
-        bg="#f4f6f8",
-        fg="#6b7280",
+        bg="#F5F7F5",
+        fg="#6B7C78",
         font=("Arial", 10)
     )
 
@@ -2858,9 +2858,9 @@ def view_claims():
         search_frame,
         text="SEARCH",
         command=search_claims,
-        bg="#2563eb",
+        bg="#0F766E",
         fg="white",
-        activebackground="#1d4ed8",
+        activebackground="#0B5F59",
         font=("Arial", 10, "bold"),
         relief="flat",
         width=10,
@@ -2878,9 +2878,9 @@ def view_claims():
         search_frame,
         text="REFRESH",
         command=refresh_claims,
-        bg="#e5e7eb",
-        fg="#374151",
-        activebackground="#d1d5db",
+        bg="#E1E8E5",
+        fg="#24403F",
+        activebackground="#B8CAC6",
         font=("Arial", 10, "bold"),
         relief="flat",
         width=10,
@@ -2902,9 +2902,9 @@ def view_claims():
         window,
         text="CLOSE",
         command=window.destroy,
-        bg="#374151",
+        bg="#24403F",
         fg="white",
-        activebackground="#1f2937",
+        activebackground="#123B3A",
         font=("Arial", 10, "bold"),
         relief="flat",
         width=15,
@@ -2938,18 +2938,62 @@ root = tk.Tk()
 
 root.title("Health Insurance Management System")
 root.geometry("1000x650")
-root.configure(bg="#f4f6f8")
+root.configure(bg="#F5F7F5")
+
+
+# =========================
+# UI THEME
+# =========================
+
+style = ttk.Style()
+try:
+    style.theme_use("clam")
+except tk.TclError:
+    pass
+
+style.configure(
+    "Treeview",
+    background="#FFFFFF",
+    foreground="#18302F",
+    rowheight=30,
+    fieldbackground="#FFFFFF",
+    font=("Arial", 10),
+    borderwidth=0
+)
+
+style.configure(
+    "Treeview.Heading",
+    background="#DCE9E6",
+    foreground="#123B3A",
+    font=("Arial", 10, "bold"),
+    relief="flat"
+)
+
+style.map(
+    "Treeview",
+    background=[("selected", "#CFE7E2")],
+    foreground=[("selected", "#123B3A")]
+)
+
+style.configure(
+    "TCombobox",
+    fieldbackground="#FFFFFF",
+    background="#FFFFFF",
+    foreground="#18302F",
+    bordercolor="#B7C8C4",
+    arrowsize=14
+)
 
 
 # =========================
 # COLORS
 # =========================
 
-SIDEBAR_COLOR = "#1f2937"
-MAIN_COLOR = "#f4f6f8"
+SIDEBAR_COLOR = "#123B3A"
+MAIN_COLOR = "#F5F7F5"
 CARD_COLOR = "#ffffff"
-TEXT_COLOR = "#111827"
-SECONDARY_TEXT = "#6b7280"
+TEXT_COLOR = "#18302F"
+SECONDARY_TEXT = "#6B7C78"
 
 
 # =========================
@@ -2959,7 +3003,7 @@ SECONDARY_TEXT = "#6b7280"
 sidebar = tk.Frame(
     root,
     bg=SIDEBAR_COLOR,
-    width=230
+    width=250
 )
 
 sidebar.pack(
@@ -2974,7 +3018,7 @@ sidebar.pack_propagate(False)
 
 app_title = tk.Label(
     sidebar,
-    text="HEALTH\nINSURANCE",
+    text="HEALTHCARE\nINSURANCE",
     bg=SIDEBAR_COLOR,
     fg="white",
     font=("Arial", 18, "bold"),
@@ -2983,14 +3027,14 @@ app_title = tk.Label(
 
 app_title.pack(
     anchor="w",
-    padx=25,
-    pady=(35, 5)
+    padx=24,
+    pady=(30, 5)
 )
 
 
 subtitle = tk.Label(
     sidebar,
-    text="Management System",
+    text="Policy & Claims Hub",
     bg=SIDEBAR_COLOR,
     fg="#9ca3af",
     font=("Arial", 10)
@@ -2998,8 +3042,8 @@ subtitle = tk.Label(
 
 subtitle.pack(
     anchor="w",
-    padx=25,
-    pady=(0, 35)
+    padx=24,
+    pady=(0, 28)
 )
 
 
@@ -3015,7 +3059,7 @@ def sidebar_button(text, command):
         command=command,
         bg=SIDEBAR_COLOR,
         fg="white",
-        activebackground="#374151",
+        activebackground="#24403F",
         activeforeground="white",
         relief="flat",
         borderwidth=0,
@@ -3076,7 +3120,7 @@ sidebar_button(
 
 separator = tk.Frame(
     sidebar,
-    bg="#374151",
+    bg="#24403F",
     height=1
 )
 
@@ -3137,7 +3181,7 @@ def show_dashboard():
 
     title = tk.Label(
         header,
-        text="Dashboard",
+        text="Operations Hub",
         bg=MAIN_COLOR,
         fg=TEXT_COLOR,
         font=("Arial", 26, "bold")
@@ -3150,7 +3194,7 @@ def show_dashboard():
 
     description = tk.Label(
         header,
-        text="Health Insurance Database Management System",
+        text="Policy, customer and claims management",
         bg=MAIN_COLOR,
         fg=SECONDARY_TEXT,
         font=("Arial", 11)
@@ -3229,8 +3273,8 @@ def show_dashboard():
             parent,
             bg=CARD_COLOR,
             width=190,
-            height=120,
-            highlightbackground="#e5e7eb",
+            height=128,
+            highlightbackground="#E1E8E5",
             highlightthickness=1
         )
 
@@ -3326,11 +3370,11 @@ def show_dashboard():
 
     view_card = tk.Button(
         actions_frame,
-        text="VIEW CUSTOMERS\n\nView all customer records",
+        text="CUSTOMER DIRECTORY\n\nBrowse & search records",
         command=view_customers,
         bg=CARD_COLOR,
         fg=TEXT_COLOR,
-        activebackground="#e5e7eb",
+        activebackground="#E1E8E5",
         relief="flat",
         borderwidth=0,
         font=("Arial", 11, "bold"),
@@ -3350,11 +3394,11 @@ def show_dashboard():
 
     add_card = tk.Button(
         actions_frame,
-        text="ADD CUSTOMER\n\nCreate a new customer record",
+        text="NEW CUSTOMER\n\nCreate a record",
         command=add_customer,
         bg=CARD_COLOR,
         fg=TEXT_COLOR,
-        activebackground="#e5e7eb",
+        activebackground="#E1E8E5",
         relief="flat",
         borderwidth=0,
         font=("Arial", 11, "bold"),
@@ -3374,11 +3418,11 @@ def show_dashboard():
 
     delete_card = tk.Button(
         actions_frame,
-        text="DELETE CUSTOMER\n\nRemove a customer record",
+        text="REMOVE CUSTOMER\n\nDelete a record",
         command=delete_customer,
         bg=CARD_COLOR,
         fg=TEXT_COLOR,
-        activebackground="#e5e7eb",
+        activebackground="#E1E8E5",
         relief="flat",
         borderwidth=0,
         font=("Arial", 11, "bold"),
@@ -3402,7 +3446,7 @@ def show_dashboard():
         main_area,
         bg=CARD_COLOR,
         height=70,
-        highlightbackground="#e5e7eb",
+        highlightbackground="#E1E8E5",
         highlightthickness=1
     )
 
@@ -3417,9 +3461,9 @@ def show_dashboard():
 
     status_label = tk.Label(
         status_frame,
-        text="●  Database Connected",
+        text="●  LIVE DATABASE",
         bg=CARD_COLOR,
-        fg="#16a34a",
+        fg="#168A70",
         font=("Arial", 11, "bold")
     )
 
@@ -3432,7 +3476,7 @@ def show_dashboard():
 
     info_label = tk.Label(
         status_frame,
-        text="MySQL • health_insurance",
+        text="MySQL  •  health_insurance",
         bg=CARD_COLOR,
         fg=SECONDARY_TEXT,
         font=("Arial", 10)
